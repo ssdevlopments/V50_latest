@@ -1,0 +1,198 @@
+	table
+	{
+		width: 100%;
+		margin-top: 2px !important;
+		text-align: center;
+		border: 1px solid #0c3d03;		
+	}
+	.institute_heading1
+	{		
+		text-align:center;
+		color:#800000;
+		font-size:24px;
+		font-weight:bold;
+	}
+	.institute_heading_sub1
+	{
+		text-align:center;
+		color:#800000;
+		font-size:14px;
+		font-weight:bold;
+	}
+	.subject_heading1
+	{
+		text-align:center;
+		background-color: #CFBFA5;
+		border: 2px solid black;
+		font-style: italic;		
+	}
+	.subject_heading2
+	{
+		font-size:13px;
+		font-weight:bold;		
+		padding: 5px;
+	}
+	.data_top1_white{padding: 10px;border: 1px solid black;vertical-align:middle;}
+	.data_top1{background-color:#F7E9CC;padding: 5px;border: 1px solid black;vertical-align:middle;}
+	.data_top2{text-align:left;line-height:normal;margin-left:11px;}
+	.data_top3{font-size:13px;font-weight:bold;}
+	
+	
+	.subject
+	{
+		vertical-align:bottom;
+		background-color:#FFE1F9;
+		border: 1px solid black;
+	}
+	td.subject > p
+	{
+		text-align:center;
+		line-height:normal;
+		margin-right:5.5px;
+	}
+	td.subject > p > span
+	{
+		font-size:10px;		
+		font-weight:bold;
+	}
+	.student1
+	{
+		font-size:12px;
+		vertical-align:bottom;
+		width:45%;
+	}
+	.student1 > p
+	{
+		text-align:left;
+		line-height:normal;
+	}
+	.student1 > p > span:nth-child(1)
+	{
+		font-size:10px;
+		font-weight:bold;		
+	}
+	.student1 > p > span:nth-child(2)
+	{
+		font-family:Arial;
+		font-size:10px;	
+	}
+	
+	.student2
+	{
+		font-size:12px;
+		vertical-align:bottom;
+		width:25%;
+	}
+	.student2 > p
+	{
+		font-size:13px;
+		text-align:left;		
+	}
+	.student2 > p > span:nth-child(1)
+	{
+		font-size:13px;
+		font-weight:bold;
+	}
+	.student2 > p > span:nth-child(2)
+	{
+		font-size:13px;
+		font-size:10px;		
+	}
+	
+	.student3
+	{
+		font-size:12px;
+		vertical-align:bottom;
+		width:30%;
+	}
+	.student3 > p
+	{
+		text-align:left;
+	}
+	.student3 > p > span:nth-child(1)
+	{
+		font-size:10px;
+		font-weight:bold;
+	}
+	.student3 > p > span:nth-child(2)
+	{
+		font-size:10px;
+	}
+	
+
+	.data_head1
+	{
+		vertical-align:bottom;
+		width: 70%;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+		
+	}
+	.data_head2
+	{
+		text-align:left;
+		line-height:normal;
+		margin-left:11px;
+	}
+	.data_item1
+	{
+		vertical-align:bottom;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+	}
+	.data_item2
+	{
+		text-align: center;
+		line-height:normal;
+	}
+	.data_item3
+	{
+		font-family:Times New Roman;
+		font-size:13px;
+		font-weight:bold;
+	}
+	.data_item4
+	{
+		color: #000080;
+		font-size: 13px;
+		font-weight: bold;
+	}
+	
+	.table_data
+	{
+		border: 1px solid #000000;
+	}
+    
+	
+	.data_head_parent1
+	{
+		vertical-align:bottom;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+	}
+	.data_head_parent2
+	{
+		text-align:left;
+		margin-left:4px;
+	}
+	.data_head_parent3
+	{
+		font-family:Arial;
+		font-size:13px;
+		font-weight:bold;
+	}
+	.signature1
+	{
+		vertical-align:bottom;
+		width:auto;
+	}
+	.signature2
+	{
+		text-align:center;
+		margin-left:2px; 
+	}
+	.signature3
+	{
+		color:#d9d9d9;
+		font-size:24px;
+	}
