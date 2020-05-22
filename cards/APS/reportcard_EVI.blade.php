@@ -554,9 +554,7 @@ foreach($studentDetails as $row)
 						      		'.$exam_dispaly_name[0]->exam_display_name.'
 						      	 </div>
 					      	 ';
-
-
-					      	/* for($componet=1;$componet<=5;$componet++)
+                            /* for($componet=1;$componet<=5;$componet++)
 					      	 {
 							 	$html.=' <div  style=" float: left;width: 67.6%;vertical-align: top;	border-right:1px solid black;">
 					      					Writing skills XX
@@ -604,9 +602,10 @@ foreach($studentDetails as $row)
 											      	$exam_subject_display_array = array();
 											      	$exam_subject_display_array = explode('@!!',$exam_subject_name);
 
-											      	//echo('<pre>');
-											      	//print_r($exam_subject_display_array);die();
-											      	$key = $student_code.'@!!'.$exam_subject_display_array[1];
+
+                                                     // $key = $student_code.'@!!'.$exam_subject_display_array[1];
+                                                     $exam_code = $exam_dispaly_name[0]->exam_code;
+                                                     $key = $exam_code.'@'.$exam_subject_display_array[1].'@'.$student_code;
 											      	//'.$exam_subject_display_array[1].'
 											      	/*..*/
 													$html.=' <div  style=" float: left;width: 67.6%;vertical-align: top;height:30px;	border-right:1px solid black;">
@@ -614,7 +613,7 @@ foreach($studentDetails as $row)
 											      	 </div>
 											      	 <div  style=" float: left;width: 31.5%;vertical-align: top; border-right:0px solid black;height:30px;text-align:center;">'
 
-											      		.'ABC'.
+											      		.$student_mark_array[$key].
 											      	'</div>';
 										 			$componet++;
 												}
@@ -634,12 +633,15 @@ foreach($studentDetails as $row)
                                     {
                                         $exam_subject_display_array = array();
                                        $exam_subject_display_array = explode('@!!',$exam_subject_name);
-                                       $key = $student_code.'@!!'.$exam_subject_display_array[1];
-                                       $html.=' <div  style=" float: left;width: 67.6%;vertical-align: top;height:30px;	border-right:1px solid black;">
+                                      // $key = $student_code.'@!!'.$exam_subject_display_array[1];
+                                      $exam_code = $exam_dispaly_name[0]->exam_code;
+                                      $key = $exam_code.'@'.$exam_subject_display_array[1].'@'.$student_code;
+
+                                      $html.=' <div  style=" float: left;width: 67.6%;vertical-align: top;height:30px;	border-right:1px solid black;">
                                                  &nbsp;&nbsp;'.$exam_subject_display_array[0].'
                                               </div>
                                               <div  style=" float: left;width: 31.5%;vertical-align: top;height:30px; border-right:0px solid black;text-align:center;">
-                                                 '.'ABC'.'
+                                                 '.$student_mark_array[$key].'
                                               </div>
                                               ';
                                         $componet++;
@@ -751,13 +753,15 @@ foreach($studentDetails as $row)
 								 	{
 								 		$exam_subject_display_array = array();
 										$exam_subject_display_array = explode('@!!',$exam_subject_name);
-										$key = $student_code.'@!!'.$exam_subject_display_array[1];
+										//$key = $student_code.'@!!'.$exam_subject_display_array[1];
+                                        $exam_code = $exam_dispaly_name[0]->exam_code;
+                                        $key = $exam_code.'@'.$exam_subject_display_array[1].'@'.$student_code;
 
 										$html.=' <div  style=" float: left;width: 67.6%;vertical-align: top;height:30px;	border-right:1px solid black;">
 						      					&nbsp;&nbsp;'.$exam_subject_display_array[0].'
 									      	 </div>
 									      	 <div  style=" float: left;width: 31.5%;vertical-align: top;height:30px; border-right:0px solid black;text-align:center;">
-									      		'.'ABC'.'
+									      		'.$student_mark_array[$key].'
 									      	 </div>
 									      	 ';
 								 		$componet++;
@@ -826,6 +830,106 @@ foreach($studentDetails as $row)
 					      	 <div  style=" float: left;width: 49.7%;border:1px solid black;background-color: antiquewhite;text-align:center;">
 					      		'.$exam_dispaly_name[0]->exam_display_name.'
                                </div> ';
+        $html.=' <div  style=" float: left;width: 49.5%;vertical-align: top;border-right:1px solid black;">
+            &nbsp;&nbsp;Height(Cm)
+        </div>
+        <div  style=" float: left;width:49.7%;vertical-align: top; border-right:1px solid black;text-align:center;">
+            Height(Cm)
+        </div> ';
+        $html.=' <div  style=" float: left;width: 49.5%;vertical-align: top;	border-right:1px solid black;">
+					&nbsp;&nbsp;Weight(Kg)
+				</div>
+				<div  style=" float: left;width:49.7%;vertical-align: top; border-right:1px solid black;text-align:center;">
+                    Weight(Kg)
+				 </div>
+				';
+        $html.='<div class="green"  style=" float: left; width: 100%;background-color: antiquewhite;height:10px;border:1px solidfont-size:12.5px;" >
+                <div  style=" float: left;text-align:left;width: 100%;font-size:10px;border:1px solid black;background-color: antiquewhite;">
+                      &nbsp;&nbsp;<b>ATTENDANCE</b>
+                   </div>
+               </div>';
+        $html.=' <div  style=" float: left;width: 20.3%;font-size:13px;vertical-align: top;border-right:1px solid black;text-align:center;background-color: antiquewhite;border-bottom:1px solid black;">
+                EV1
+            </div>
+            <div  style=" float: left;width:79.2%;height:10px;font-size:13px; vertical-align: top; border-right:1px solid black;text-align:left;background-color: antiquewhite1;border-bottom:1px solid black;">
+                    ATTENDANCE
+             </div>';
+             $html.='<div class="green"  style=" float: left; width: 100%;font-size:10px;background-color: antiquewhite;height:10px;border:1px solidfont-size:12.5px;" >
+             <div  style=" float: left;text-align:left;width: 100%;border:1px solid black;background-color: antiquewhite;">
+                   &nbsp;&nbsp;<b>SPECIFIC PARTICIPATION</b>
+                </div>
+            </div>';
+        $html.=' <div  style=" float: left;width: 20.3%;font-size:10px;vertical-align: top;border-right:1px solid black;text-align:center;background-color: antiquewhite;border-bottom:1px solid black;font-size:13px;">
+             EV1
+         </div>
+         <div  style=" float: left;width:79.2%;height:10px;font-size:10px; vertical-align: top; border-right:1px solid black;text-align:left;background-color: antiquewhite1;border-bottom:1px solid black;font-size:13px;">
+                specific_participation
+          </div>';
+          $html.='<div class="green"  style=" float: left; width: 100%;background-color: antiquewhite;height:10px;border:1px solidfont-size:12.5px;" >
+          <div  style=" float: left;text-align:left;width: 100%;font-size:10px;border:1px solid black;background-color: antiquewhite;">
+                &nbsp;&nbsp;<b>GENERAL REMARK</b>
+             </div>
+         </div>';
+        $html.='<div class="green"  style=" float: left; width: 100%;font-size:10px;background-color: antiquewhite;height:10px;border:1px solid" >
+          <div  style=" float: left;text-align:left;width: 100%;border:0px solid black;background-color: white;font-size:13px;">
+                 general_remark
+             </div>
+         </div>';
+
+         $html.='<div class="green"  style=" float: left; width: 100%;background-color: antiquewhite;height:10px;border:1px solidfont-size:12.5px;" >
+         <div  style=" float: left;text-align:left;width: 100%;font-size:10px;border:1px solid black;background-color: antiquewhite;">
+               &nbsp;&nbsp;<b>RESULT</b>
+            </div>
+        </div>';
+     $html.='<div class="green"  style=" float: left; width: 100%;background-color: antiquewhite;height:10px;border:1px solidfont-size:12.5px;" >
+         <div  style=" float: left;text-align:left;width: 100%;border:1px solid black;background-color: white;">
+                result
+            </div>
+        </div>';
+
+        if($institute_code == 'APSGOL')
+        {
+           $sign_waterMark = '&nbsp;&nbsp;&nbsp;&nbsp;';
+       }
+       else
+       {
+           $sign_waterMark = 'S I G N A T U R E S';
+       }
+       $html.='<table cellspacing="0" style="margin-left:0.5pt;width: 100%; border-collapse: collapse;border: 1px solid #0c3d03;  " class="table_data" border="0">
+                       <tr>
+                           <td colspan="3" class="student2" style="width: 20%;font-size:9px; text-align:left;">
+                               <p>
+                                   <span class="student2" style="font-size:9pt;"><b>&nbsp;&nbsp;&nbsp;Issue Date :</b> </span>
+                                   <span style="color:#800000;font-family:Arial;font-size:9pt;text-transform:none;font-weight:bold;font-style:normal;font-variant:normal;">'.$date_of_issue.'</span>
+                               </p>
+                           </td>
+                       </tr>
+                       <br>
+                       <tr>
+                           <td colspan="3" class="signature1" style="padding-left:10%">
+                               <p  class="signature2"><span  class="signature3">'.$sign_waterMark.'</span></p>
+                           </td>
+                       </tr>
+                           <tr>';
+                    $signature_names = array();
+                   if(count($signature_names) > 0)
+                   {
+                        $width = 100/(count($signature_names));
+                        for($j=0; $j < count($signature_names); $j++)
+                        {
+                            $html .=	'<td class="student2" style="width:'.$width.'%;text-align:center;vertical-align:top;">
+                                                <p style="text-align: right;">
+                                                    <span style="font-size:12px;"><b>'.$signature_names[$j].'</b></span>
+                                                </p>
+                                            </td>';
+                        }
+
+                   }
+
+                   $html .=	'</tr>
+                             </table>'	;
+
+
 
 
     $html.= '</div>';
