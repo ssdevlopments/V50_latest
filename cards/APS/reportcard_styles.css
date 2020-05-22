@@ -1,0 +1,204 @@
+	table
+	{
+		width: 100%;
+		margin-top: 2px !important;
+		text-align: center;
+		/*border: 1px solid #0c3d03;*/
+		
+	}
+	.institute_heading1
+	{		
+		text-align:center;
+	}
+	.institute_heading2
+	{
+		color:#800000;
+		font-size:24px;
+		font-weight:bold;
+	}
+	
+	.institute_heading_sub1
+	{
+		text-align:center;
+	}
+	.institute_heading_sub2
+	{
+		color:#800000;
+		font-size:12px;
+		font-weight:bold;
+	}
+	.subject
+	{
+		vertical-align:bottom;
+		background-color:#FFE1F9;
+		border: 1px solid black;
+	}
+	td.subject > p
+	{
+		text-align:center;
+		margin-right:5.5px;
+	}
+	td.subject > p > span
+	{
+		font-size:11px;		
+		font-weight:bold;
+	}
+	.student1
+	{
+		vertical-align:bottom;
+		width:40%;
+	}
+	.student1 > p
+	{
+		text-align:left;
+	}
+	.student1 > p > span:nth-child(1)
+	{
+		font-size:11px;
+		font-weight:bold;		
+	}
+	.student1 > p > span:nth-child(2)
+	{
+		font-family:Arial;
+		font-size:11px;	
+	}
+	
+	.student2
+	{
+		vertical-align:bottom;
+		width:30%;
+	}
+	.student2 > p
+	{
+		text-align:left;		
+	}
+	.student2 > p > span:nth-child(1)
+	{
+		font-size:11px;
+		font-weight:bold;
+	}
+	.student2 > p > span:nth-child(2)
+	{
+		font-size:11px;		
+	}
+	
+	.student3
+	{
+		vertical-align:bottom;
+		width:30%;
+	}
+	.student3 > p
+	{
+		text-align:left;
+	}
+	.student3 > p > span:nth-child(1)
+	{
+		font-size:11px;
+		font-weight:bold;
+	}
+	.student3 > p > span:nth-child(2)
+	{
+		font-size:10px;
+	}
+	
+
+	.data_head1
+	{
+		vertical-align:bottom;
+		width: 70%;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+		
+	}
+	.data_head2
+	{
+		text-align:left;
+		margin-left:11px;
+	}
+	.data_item1
+	{
+		vertical-align:bottom;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+	}
+	.data_item2
+	{
+		text-align: center;		
+	}
+	.data_item3
+	{
+		font-family:Arial;
+		font-size:10px;
+	}
+	.data_item4
+	{
+		color: #000080;
+		font-size: 11px;
+		font-weight: bold;
+	}
+	.data_top1
+	{
+		vertical-align:bottom;
+		background-color:#FAE7E4;
+		padding: 5px;
+		border: 1px solid black;
+	}
+	.data_top2
+	{
+		text-align:left;
+		margin-left:11px;
+	}
+	.data_top3
+	{
+		font-size:11px;
+		font-weight:bold;
+	}
+	.table_data
+	{
+		border: 1px solid #000000;
+	}
+    .subject_heading1
+	{
+		text-align:center;
+		background-color: #FFE1F9;
+		border: 2px solid black;
+	}
+	.subject_heading2
+	{
+		font-size:11px;
+		font-weight:bold;		
+		padding: 5px;
+	}
+	
+	.data_head_parent1
+	{
+		vertical-align:bottom;
+		border-right: 1px solid black;
+		border-left: 1px solid black;
+	}
+	.data_head_parent2
+	{
+		text-align:left;
+		margin-left:4px;
+	}
+	.data_head_parent3
+	{
+		font-family:Arial;
+		font-size:11px;
+		font-weight:bold;
+	}
+	.signature1
+	{
+		vertical-align:bottom;
+		width:auto;
+	}
+	.signature2
+	{
+		text-align:center;
+		margin-left:2px; 
+	}
+	.signature3
+	{
+		color:#FAE7E4;
+		font-size:30px;
+	}
