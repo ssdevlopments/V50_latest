@@ -1,0 +1,12 @@
+
+
+
+Route::get('/master-page/api/SELECT_CERTIFICATE_TYPE','School\StudentsController@selectCertificateType');
+
+
+Route::get('/students/STU_CERTIFICATE','School\StudentsController@stu_certificatePage');
+Route::get('/students/TC_NUMBER_AUTO_REQUIRED','School\StudentsController@tc_number_auto_required');
+Route::get('/students/SELECT_SPECIFIC_TEMPLATE','School\StudentsController@select_specific_template');
+Route::post('/students/SAVE_SPECIFIC_TEMPLATE','School\StudentsController@save_specific_template');
+Route::get('/students/STU_CERTIFICATE_PDF','School\StudentsController@stu_certificatePdfPage');
+				
