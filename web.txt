@@ -1,0 +1,2 @@
+Route::get('/students/SAVE_MISC_DETAILS','School\StudentsController@SAVE_MISC_DETAILS');
+				
