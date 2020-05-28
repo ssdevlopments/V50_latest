@@ -689,15 +689,20 @@ foreach($studentDetails as $row)
                         //   echo('<pre>');
                         //   print_r($subject);
                         //   die();
+
+                        $temp_subject_total = 0;
+                        $temp_theory_total = 0;
+                        $temp_max_mark_sum = 0;
                         $subject_name = $subject->subject_name;
                         $subject_code = $subject->subject_code;
 
                         $html.="<tr border='1'>";
-                        $html .='<td class="data_top11" >
-										<p class="data_top2">
-											<span class="data_top3">'.$subject_name.'</span>
-										</p>
-                                    </td>';
+                         $html.='<td class="data_top1">
+                                    <p class="data_top2">
+                                        <span class="data_top3">'.$subject_name.'</span>
+                                     </p>
+                                 </td>';
+
                                     
                                     //foreach($exam_mapped_THPR_array AS $exam_type_arr)
                                      foreach ($exam_mapped_THPR_array as $key => $value)
@@ -738,8 +743,20 @@ foreach($studentDetails as $row)
                                                     if(array_key_exists($key,$examMarkGrade))
                                                     {
 
-                                                       
+                                                        $temp_max_mark = $examMarkGrade[$key]->max_mark;
                                                         $temp_marks_obtained = $examMarkGrade[$key]->mark_secured;
+
+                                                        $temp_max_mark_sum += $temp_max_mark;
+                                                         
+
+                                                        if($temp_marks_obtained > 0)
+                                                       {
+                                                         $temp_subject_total += $temp_marks_obtained;
+                                                        if($exam_type == "THEORY")
+                                                         {
+                                                            $temp_theory_total += $temp_marks_obtained;
+                                                         }
+                                                       }
                                                    
                                                     }
                                                     else
@@ -765,9 +782,34 @@ foreach($studentDetails as $row)
                                             <p class="data_top2">
                                                 <span class="data_top3">TOTAL</span>
                                              </p>
-                                         </td>';
+                                            </td>';
                                          } 
-                                     }             
+                                     }  
+                                     
+                                        $pecentage = 0.0;
+                                        if($temp_max_mark_sum > 0)
+                                        {
+                                            $perecentage = ($temp_subject_total/$temp_max_mark_sum)*100;
+                                            $pecentage = number_format($perecentage,2);
+
+                                        }
+                                        $html.='<td class="data_top1">
+                                          <p class="data_top2">
+                                              <span class="data_top3">'.$temp_subject_total.'</span>
+                                           </p>
+                                       </td>';
+                                       
+                                       $html.='<td class="data_top1">
+                                          <p class="data_top2">
+                                              <span class="data_top3">'.$temp_theory_total.'</span>
+                                           </p>
+                                       </td>';
+                                       $html.='<td class="data_top1">
+                                          <p class="data_top2">
+                                              <span class="data_top3">'.$pecentage.'</span>
+                                           </p>
+                                       </td>';
+                                       
                          $html.='</tr>';
 
                      }
