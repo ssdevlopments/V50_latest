@@ -457,12 +457,14 @@ foreach($studentDetails as $row)
 	$mothers_name = $row->mothers_name;
     $student_code = $row->student_code;
 
+    //echo($student_code);die();
+
      $student_subject = DB::SELECT("select student_code,A.subject_code,B.subject_name,A.optional_no
                 from k12.ac_student_subjects A
                 inner join k12.ac_subject_master B 
                 ON A.subject_code = B.subject_code
                 
-                where A.student_code = '1805662019-20_APSDEC'
+                where A.student_code = '$student_code'
                 AND A.subject_Code IN ('041_2019-20_APSDEC','048_2019-20_APSDEC','045_2019-20_APSDEC','043_2019-20_APSDEC',
                                     '101_2019-20_APSDEC','042_2019-20_APSDEC')");
 
